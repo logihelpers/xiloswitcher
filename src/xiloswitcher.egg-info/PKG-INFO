@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: xiloswitcher
+Version: 0.1.0
+Summary: Xiloswitcher control for Flet
+Author-email: Flet contributors <you@example.com>
+Project-URL: Homepage, https://mydomain.dev
+Project-URL: Documentation, https://github.com/MyGithubAccount/xiloswitcher
+Project-URL: Repository, https://github.com/MyGithubAccount/xiloswitcher
+Project-URL: Issues, https://github.com/MyGithubAccount/xiloswitcher/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flet>=0.26.0
+
+# xiloswitcher
+Xiloswitcher control for Flet
+
+TODO: Add your control documentation here.

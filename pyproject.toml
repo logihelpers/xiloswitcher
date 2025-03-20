@@ -1,0 +1,36 @@
+[project]
+name = "xiloswitcher"
+version = "0.1.0"
+description = "Xiloswitcher control for Flet"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Flet contributors", email = "you@example.com" }
+]
+dependencies = [
+    "flet>=0.26.0",
+]
+
+[project.urls]
+Homepage = "https://mydomain.dev"
+Documentation = "https://github.com/MyGithubAccount/xiloswitcher"
+Repository = "https://github.com/MyGithubAccount/xiloswitcher"
+Issues = "https://github.com/MyGithubAccount/xiloswitcher/issues"
+
+[tool.setuptools.package-data]
+"flutter.xiloswitcher" = ["**/*"]
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.26.0",
+]
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.26.0"}
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

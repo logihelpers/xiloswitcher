@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/flutter/xiloswitcher/CHANGELOG.md
+src/flutter/xiloswitcher/LICENSE
+src/flutter/xiloswitcher/README.md
+src/flutter/xiloswitcher/pubspec.lock
+src/flutter/xiloswitcher/pubspec.yaml
+src/flutter/xiloswitcher/lib/xiloswitcher.dart
+src/flutter/xiloswitcher/lib/src/create_control.dart
+src/flutter/xiloswitcher/lib/src/xiloswitcher.dart
+src/xiloswitcher/__init__.py
+src/xiloswitcher/xiloswitcher.py
+src/xiloswitcher.egg-info/PKG-INFO
+src/xiloswitcher.egg-info/SOURCES.txt
+src/xiloswitcher.egg-info/dependency_links.txt
+src/xiloswitcher.egg-info/requires.txt
+src/xiloswitcher.egg-info/top_level.txt
