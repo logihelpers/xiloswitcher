@@ -10,6 +10,7 @@ def main(page: ft.Page):
 
     xs = XiloSwitcher(
         expand=True,
+        orientation=XiloSwitcher.Orientation.HORIZONTAL,
         controls=[
             ft.Container(expand=True, bgcolor="red"),
             ft.Container(expand=True, bgcolor="orange"),

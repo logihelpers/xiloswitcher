@@ -6,7 +6,6 @@ from flet.core.control import OptionalNumber, Control, Ref
 
 from flet.core.types import (
     OffsetValue,
-    OptionalControlEventCallable,
     ResponsiveNumber,
     RotateValue,
     ScaleValue,
@@ -16,10 +15,14 @@ class XiloSwitcher(ConstrainedControl):
     """
     Xiloswitcher Control.
     """
+    class Orientation(Enum):
+        VERTICAL: str = "VERTICAL"
+        HORIZONTAL: str = "HORIZONTAL"
 
     def __init__(
         self,
         controls: Optional[Sequence[Control]] = None,
+        orientation: Optional[Orientation] = None,
         #
         # Control
         #
@@ -70,6 +73,7 @@ class XiloSwitcher(ConstrainedControl):
         )
 
         self.controls = controls
+        self.orientation = orientation
 
     def _get_control_name(self):
         return "xiloswitcher"
@@ -79,6 +83,14 @@ class XiloSwitcher(ConstrainedControl):
 
     def __contains__(self, item):
         return item in self.__controls
+    
+    @property
+    def orientation(self) -> Orientation:
+        return XiloSwitcher.Orientation.VERTICAL if self._get_attr("orientation") == "VERTICAL" else XiloSwitcher.Orientation.HORIZONTAL
+    
+    @orientation.setter
+    def orientation(self, orientation: Orientation = Orientation.VERTICAL):
+        self._set_attr("orientation", orientation.value)
 
     # controls
     @property

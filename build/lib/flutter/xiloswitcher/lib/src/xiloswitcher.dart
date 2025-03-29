@@ -59,6 +59,8 @@ class _XiloswitcherControlState extends State<XiloswitcherControl> with FletStor
       });
     }();
 
+    Axis _scrollDirection = (widget.control.attrString("orientation", "VERTICAL") == "VERTICAL") ? Axis.vertical: Axis.horizontal;
+
     bool disabled = widget.control.isDisabled || widget.parentDisabled;
 
     List<Widget> controls = widget.children.where((c) => c.isVisible).map((c) {
@@ -67,7 +69,7 @@ class _XiloswitcherControlState extends State<XiloswitcherControl> with FletStor
 
     var pageView = PageView(
       controller: _pageViewController,
-      scrollDirection: Axis.vertical,
+      scrollDirection: _scrollDirection,
       physics: NeverScrollableScrollPhysics(),
       children: controls,
     );
